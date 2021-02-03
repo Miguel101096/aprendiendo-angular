@@ -1,0 +1,13 @@
+.active {
+    border: 3px solid yellow;
+}
+.altoPrecio {
+    color: gray;
+    font-size: 18px;
+}
+.subrayado {
+    text-decoration: underline;
+}
+.fondoRojo {
+    background-color: red;
+}
