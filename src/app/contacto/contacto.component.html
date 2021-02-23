@@ -1,0 +1,33 @@
+<h2>Contacto</h2>
+<form #formContacto='ngForm' (ngSubmit)="onSubmit(formContacto)">
+  <label for="nombre">Nombre</label>
+  <br/>
+  <!-- Cada campo debe formar parte del formulario de angular -->
+  <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="contacto_usuario.nombre" required pattern="[éA-Za-z]+"/>
+  <span *ngIf="nombre.touched && !nombre.valid">
+    El nombre es obligatorio
+  </span>
+  <br/>
+  <label for="apellidos">Apellidos</label>
+  <br/>
+  <input type="text" name="apellidos"  #apellidos="ngModel" [(ngModel)]="contacto_usuario.apellidos" required pattern="[éA-Za-z]+"/>
+  <span *ngIf="apellidos.touched && !apellidos.valid">
+    El apellidos es obligatorio
+  </span>
+  <br/>
+  <label for="email">Email</label>
+  <br/>
+  <input type="email" name="email" #email="ngModel" [(ngModel)]="contacto_usuario.email" required pattern="[A-Za-z.@]+"/>
+  <span *ngIf="email.touched && !email.valid">
+    El email es obligatorio
+  </span>
+  <br/>
+  <label for="mensaje">Mensaje</label>
+  <br/>
+  <input type="email" name="mensaje" #mensaje="ngModel" [(ngModel)]="contacto_usuario.mensaje" required pattern="[A-Za-z]+"/>
+  <span *ngIf="mensaje.touched && !mensaje.valid">
+    El mensaje es obligatorio
+  </span>
+  <br/><br/>
+  <input type="submit" value="Enviar" [disabled]="!formContacto.form.valid"/> <!-- Desahabilita el boton cuando la informacion no es valida -->
+</form>

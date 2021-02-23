@@ -1,6 +1,7 @@
-export var Configuration = {
-    color:'black',
-    fondo:'gray',
-    titulo:'Aplicacion angular',
-    descripcion: 'Aprendiendo angular'
-}
+export var Configuration={
+  color:"red",
+  fondo:"#ccc",
+  titulo:"Aplicacion Angular",
+  descripcion:"Aprendiendo Angular"
+};
+
